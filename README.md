@@ -3,7 +3,12 @@ An open source Documentation Searching webpage using searchco.de's API
 <br>Added Fancybox iframe integration
 
 #Search via url
-setting the lang url parameter to a specific language name, will automatically pick that language from the dropdown menu when the page loads. For example: http://varemenos.com/projects/docfinder/?lang=php
+
+##the "q" parameter
+setting the "q" url parameter to any string, will automatically insert that string in the keyword input and search for it once the page loads. For example: http://varemenos.com/projects/docfinder/?q=explode
+
+##the "lang" parameter
+setting the "lang" url parameter to a specific language name, will automatically pick that language from the dropdown menu when the page loads. For example: http://varemenos.com/projects/docfinder/?lang=php
 
 valid options for the lang parameter are:
 <ul>
@@ -46,3 +51,6 @@ valid options for the lang parameter are:
 	<li>"win32_error" for Win 32 Error</li>
 	<li>"windows_command" for Windows Command</li>
 </ul>
+
+##"q" and "lang" parameters (together)
+You can use both of them at once for example: http://varemenos.com/projects/docfinder/?lang=php&q=explode
