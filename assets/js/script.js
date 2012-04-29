@@ -1,27 +1,34 @@
-/* Author: Varemenos
-
-*/
+//  =====================
+//  = Author: Varemenos =
+//  =====================
 
 $(function(){
 	// current page = 1
 	current = 1;
 
+	// activate iframe fancybox
 	$(".resultLink").fancybox({
 		width: '90%',
 		height: '95%',
 		type: 'iframe'
 	});
 
+	// get q and lang url parameters into variables
 	getQ = getUrlVar('q');
 	getLang = getUrlVar('lang');
 
+	// if the lang url parameter is not undefined, not null and not an empty string
 	if(typeof(getLang) != "undefined" && getLang !== null&& getLang !== ''){
+		// if the html of the selected option is not null
 		if($('#lang option[name="'+getLang+'"]').html() != null){
+			// then give that option the attribute of "selected"
 			$('#lang option[name="'+getLang+'"]').attr('selected', true);
 		}
 	}
 
+	// if the q url parameter is not undefined, not null and not an empty string
 	if(typeof(getQ) != "undefined" && getQ !== null&& getQ !== ''){
+		// insert the value of the q parameter inside the search input element
 		$('#query').val(getQ);
 		// call the getResults function
 		getResults();
@@ -133,6 +140,8 @@ $(function(){
 		});
 	}
 
+	// get the specified url parameter's value
+	// credits: https://gist.github.com/1771618
 	function getUrlVar(key){
 		var result = new RegExp(key + "=([^&]*)", "i").exec(window.location.search);
 		return result && result[1] || "";
