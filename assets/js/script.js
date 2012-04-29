@@ -6,10 +6,13 @@ $(function(){
 	// current page = 1
 	current = 1;
 
+	fancyWidth = parseInt(($(window).width()) * 0.95);
+	fancyHeight = parseInt(($(window).height()) * 0.95);
+
 	// activate iframe fancybox
 	$(".resultLink").fancybox({
-		width: '90%',
-		height: '95%',
+		width: fancyWidth,
+		height: fancyHeight,
 		type: 'iframe'
 	});
 
