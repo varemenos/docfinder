@@ -6,7 +6,9 @@ $(function(){
 	// current page = 1
 	current = 1;
 
+	// set fancybox's width to 95% of the window's width
 	fancyWidth = parseInt(($(window).width()) * 0.95);
+	// set fancybox's height to 95% of the window's height
 	fancyHeight = parseInt(($(window).height()) * 0.95);
 
 	// activate iframe fancybox
