@@ -122,9 +122,11 @@ $(function(){
 
 					// create the result HTML
 					for (var i = 0; i < data.results.length; i++){
+						// old format of result title:
+						// <h3><a class="resultLink" href="'+data.results[i].url+'">' + (((current -1) * 10) + (i+1)) + ') '+data.results[i].name+'</a></h3>\
 						$("#results").append(' \
 							<div class="result">\
-								<h3><a class="resultLink" href="'+data.results[i].url+'">' + (((current -1) * 10) + (i+1)) + ' '+data.results[i].name+'</a></h3>\
+								<h3><a class="resultLink" href="'+data.results[i].url+'">' + data.results[i].name+'</a></h3>\
 								<p class="description">'+data.results[i].description+'</p>\
 								<p class="synopsis">'+data.results[i].synopsis+'</p>\
 								<div class="namespace">'+data.results[i].namespace+'</div>\

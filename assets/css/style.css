@@ -305,6 +305,15 @@ td {
   color: black;
   padding: 0.2em 0; }
 
+a,
+a:visited,
+a:active {
+  text-decoration: none; }
+
+a:focus,
+a:hover {
+  text-decoration: underline; }
+
 * {
   -webkit-transition: all 500ms ease;
   -moz-transition: all 500ms ease;
@@ -408,13 +417,12 @@ form {
   #results .result {
     margin: 0.5em;
     padding: 0.5em;
-    background-color: #f8f8f8;
-    border: 1px solid #cccccc;
-    -webkit-box-shadow: 0 0 2px #cccccc;
-    -moz-box-shadow: 0 0 2px #cccccc;
-    box-shadow: 0 0 2px #cccccc; }
+    border-top: 1px solid #cccccc; }
+  #results .result:last-child {
+    border-bottom: 1px solid #cccccc; }
   #results h3 {
-    margin: 0; }
+    margin: 0;
+    padding-bottom: 0.5em; }
   #results p {
     font-size: 0.8em;
     margin: 0;

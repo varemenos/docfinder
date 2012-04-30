@@ -6,6 +6,17 @@ $color1: #F8F8F8;
 $color2: #ccCCCc;
 $color3: #FFFFFF;
 
+a,
+a:visited,
+a:active{
+	text-decoration: none;
+}
+
+a:focus,
+a:hover{
+	text-decoration: underline;
+}
+
 *{
 	-webkit-transition: all 500ms ease;
 	-moz-transition: all 500ms ease;
@@ -133,15 +144,16 @@ form{
 	.result{
 		margin: 0.5em;
 		padding: 0.5em;
-		background-color: $color1;
-		border: 1px solid $color2;
-		-webkit-box-shadow: 0 0 2px $color2;
-		-moz-box-shadow: 0 0 2px $color2;
-		box-shadow: 0 0 2px $color2;
+		border-top: 1px solid $color2;
+	}
+
+	.result:last-child{
+		border-bottom: 1px solid $color2;
 	}
 
 	h3{
 		margin: 0;
+		padding-bottom: 0.5em;
 	}
 
 	p{
