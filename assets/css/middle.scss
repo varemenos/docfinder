@@ -2,8 +2,9 @@
 //  = Author: Varemenos =
 //  =====================
  
-$color1: #f8f8f8;
-$color2: #ccc;
+$color1: #F8F8F8;
+$color2: #ccCCCc;
+$color3: #FFFFFF;
 
 *{
 	-webkit-transition: all 500ms ease;
@@ -14,28 +15,26 @@ $color2: #ccc;
 }
 
 header{
-	padding-bottom: 0.5em;
-	text-align: center;
-	background-color: $color1;
-	border: 1px solid $color2;
-
-	a{
-		font-weight: bold;
-		text-decoration: none;
-	}
-
-	h1{
-		text-align: center;
-		width: 100%;
-		margin: 0;
-	}
+	display: none;
 }
 
 form{
-	margin: 0 auto;
-	padding: 0.5em;
+	margin: 0 auto 1em auto;
+	padding: 0;
 	text-align: center;
-	max-width: 960px;
+	max-width: 1140px;
+	border-left: 1px solid $color2;
+	border-bottom: 1px solid $color2;
+	border-right: 1px solid $color2;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-bottom-right-radius: 5px;
+	-webkit-box-shadow: 0 0 5px $color2;
+	-moz-box-shadow: 0 0 5px $color2;
+	box-shadow: 0 0 5px $color2;
 
 	fieldset{
 		-webkit-box-sizing: border-box;
@@ -99,29 +98,37 @@ form{
 	}
 }
 
-#info{
-	z-index: 1;
-	display: block;
-	margin-bottom: 0.5em;
-	padding: 0.5em 0;
-	text-align: center;
-	background-color: $color1;
-	border-top: 1px solid $color2;
-	border-bottom: 1px solid $color2;
-	-webkit-box-shadow: 0 0 2px $color2;
-	-moz-box-shadow: 0 0 2px $color2;
-	box-shadow: 0 0 2px $color2;
-
-	h3,
-	h4{
-		font-size: 1em;
-		margin: 0;
-		padding: 0;
-	}
-}
-
 #results{
 	display: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 1em;
+	border: 1px solid $color2;
+	-webkit-box-shadow: 0 0 5px $color2;
+	-moz-box-shadow: 0 0 5px $color2;
+	box-shadow: 0 0 5px $color2;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+	#info{
+		z-index: 1;
+		display: block;
+		margin-bottom: 1em;
+		padding: 0;
+		text-align: center;
+
+		h3,
+		h4{
+			font-size: 1em;
+			margin: 0;
+			padding: 0;
+		}
+	}
 
 	.result{
 		margin: 0.5em;
@@ -152,9 +159,16 @@ form{
 }
 
 footer{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 	padding: 0.5em 0;
 	text-align: center;
-	background-color: $color1;
+	background-color: $color3;
 	border-top: 1px solid $color2;
 	border-bottom: 1px solid $color2;
 	-webkit-box-shadow: 0 0 2px $color2;

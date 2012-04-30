@@ -3,6 +3,11 @@
 //  =====================
 
 $(function(){
+	// get footer's height
+	footerHeight = $('footer').height();
+	// put a margin equal to 2 times the height of the footer
+	$('#results').css('margin-bottom', (2 * footerHeight));
+
 	// current page = 1
 	current = 1;
 
@@ -110,8 +115,7 @@ $(function(){
 				$('#results').hide();
 
 				// print data returned {
-					$("#info h3").html('Search for: "'+data.query+'"');
-					$("#info h4").html('Found: "'+data.total+'"');
+					$("#info h3").html('Found "'+data.total+'" results.');
 
 					// delete any already loaded results from previous queries
 					$('#results .result').remove();

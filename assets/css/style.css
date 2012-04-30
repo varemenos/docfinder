@@ -313,23 +313,25 @@ td {
   transition: all 500ms ease; }
 
 header {
-  padding-bottom: 0.5em;
-  text-align: center;
-  background-color: #f8f8f8;
-  border: 1px solid #cccccc; }
-  header a {
-    font-weight: bold;
-    text-decoration: none; }
-  header h1 {
-    text-align: center;
-    width: 100%;
-    margin: 0; }
+  display: none; }
 
 form {
-  margin: 0 auto;
-  padding: 0.5em;
+  margin: 0 auto 1em auto;
+  padding: 0;
   text-align: center;
-  max-width: 960px; }
+  max-width: 1140px;
+  border-left: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-box-shadow: 0 0 5px #cccccc;
+  -moz-box-shadow: 0 0 5px #cccccc;
+  box-shadow: 0 0 5px #cccccc; }
   form fieldset {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -376,26 +378,33 @@ form {
       -moz-box-shadow: 0 0 0.9em #cccccc inset;
       box-shadow: 0 0 0.9em #cccccc inset; }
 
-#info {
-  z-index: 1;
-  display: block;
-  margin-bottom: 0.5em;
-  padding: 0.5em 0;
-  text-align: center;
-  background-color: #f8f8f8;
-  border-top: 1px solid #cccccc;
-  border-bottom: 1px solid #cccccc;
-  -webkit-box-shadow: 0 0 2px #cccccc;
-  -moz-box-shadow: 0 0 2px #cccccc;
-  box-shadow: 0 0 2px #cccccc; }
-  #info h3,
-  #info h4 {
-    font-size: 1em;
-    margin: 0;
-    padding: 0; }
-
 #results {
-  display: none; }
+  display: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: 0 0 5px #cccccc;
+  -moz-box-shadow: 0 0 5px #cccccc;
+  box-shadow: 0 0 5px #cccccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+  #results #info {
+    z-index: 1;
+    display: block;
+    margin-bottom: 1em;
+    padding: 0;
+    text-align: center; }
+    #results #info h3,
+    #results #info h4 {
+      font-size: 1em;
+      margin: 0;
+      padding: 0; }
   #results .result {
     margin: 0.5em;
     padding: 0.5em;
@@ -417,9 +426,16 @@ form {
     font-weight: bold; }
 
 footer {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   padding: 0.5em 0;
   text-align: center;
-  background-color: #f8f8f8;
+  background-color: white;
   border-top: 1px solid #cccccc;
   border-bottom: 1px solid #cccccc;
   -webkit-box-shadow: 0 0 2px #cccccc;
