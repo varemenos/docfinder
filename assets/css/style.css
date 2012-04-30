@@ -409,8 +409,7 @@ form {
     margin-bottom: 1em;
     padding: 0;
     text-align: center; }
-    #results #info h3,
-    #results #info h4 {
+    #results #info h3 {
       font-size: 1em;
       margin: 0;
       padding: 0; }
@@ -423,6 +422,8 @@ form {
   #results h3 {
     margin: 0;
     padding-bottom: 0.5em; }
+    #results h3 sup {
+      font-size: 0.5em; }
   #results p {
     font-size: 0.8em;
     margin: 0;
