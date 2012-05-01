@@ -25,6 +25,11 @@ a:hover{
 	transition: all 500ms ease;
 }
 
+body{
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
 header{
 	display: none;
 }
