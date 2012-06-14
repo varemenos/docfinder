@@ -10,7 +10,7 @@
 *~
 *.sass-cache
 *.psd
-.scss
+*.scss
 
 # OS or Editor folders
 .DS_Store
