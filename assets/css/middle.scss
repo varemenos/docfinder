@@ -73,7 +73,13 @@ $transition: all 300ms ease-in-out;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;
-	*behavior: url(assets/js/boxsizing.htc);
+}
+
+@mixin border-box-important{
+	-webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	-ms-box-sizing: border-box !important;
+	box-sizing: border-box !important;
 }
 
 @mixin hyphens{
@@ -185,6 +191,7 @@ form{
 	@include border-box;
 	display: none;
 	max-width: 1140px;
+	width: 90%;
 	margin: 0 auto;
 	padding: 1em;
 	background-color: $color4;
@@ -249,5 +256,31 @@ footer{
 	p{
 		margin: 0;
 		padding: 0;
+	}
+}
+
+/* Mobile */
+
+@media handheld, only screen and (max-width: 767px) {
+	body{
+		overflow-x: hidden !important;
+		overflow-y: hidden !important;
+	}
+	form{
+		text-align: center !important;
+
+		button,
+		select,
+		input{
+			@include border-box-important;
+			display: inline-block !important;
+			float: none !important;
+			width: 90% !important;
+			margin: 0.5em 0 !important;
+		}
+
+		input{
+			text-align: left !important;
+		}
 	}
 }
