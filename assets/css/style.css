@@ -334,7 +334,6 @@ form {
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url(assets/js/boxsizing.htc);
   margin: 0 auto 1em auto;
   padding: 0;
   text-align: center;
@@ -356,12 +355,10 @@ form {
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(assets/js/boxsizing.htc);
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    *behavior: url(assets/js/boxsizing.htc);
     padding: 1%; }
     form fieldset input,
     form fieldset button,
@@ -370,7 +367,6 @@ form {
       -moz-box-sizing: border-box;
       -ms-box-sizing: border-box;
       box-sizing: border-box;
-      *behavior: url(assets/js/boxsizing.htc);
       display: block;
       float: left;
       padding: 0.5em;
@@ -405,7 +401,6 @@ form {
         -moz-box-sizing: border-box;
         -ms-box-sizing: border-box;
         box-sizing: border-box;
-        *behavior: url(assets/js/boxsizing.htc);
         text-align: left;
         font-size: 1em;
         line-height: 1em; }
@@ -419,9 +414,9 @@ form {
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url(assets/js/boxsizing.htc);
   display: none;
   max-width: 1140px;
+  width: 90%;
   margin: 0 auto;
   padding: 1em;
   background-color: #eeeeee;
@@ -468,7 +463,6 @@ footer {
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  *behavior: url(assets/js/boxsizing.htc);
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -483,6 +477,27 @@ footer {
     margin: 0;
     padding: 0; }
 
+/* Mobile */
+@media handheld, only screen and (max-width: 767px) {
+  body {
+    overflow-x: hidden !important;
+    overflow-y: hidden !important; }
+
+  form {
+    text-align: center !important; }
+    form button,
+    form select,
+    form input {
+      -webkit-box-sizing: border-box !important;
+      -moz-box-sizing: border-box !important;
+      -ms-box-sizing: border-box !important;
+      box-sizing: border-box !important;
+      display: inline-block !important;
+      float: none !important;
+      width: 90% !important;
+      margin: 0.5em 0 !important; }
+    form input {
+      text-align: left !important; } }
 .fancybox-tmp iframe,
 .fancybox-tmp object {
   vertical-align: top;
