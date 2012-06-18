@@ -196,7 +196,6 @@ form{
 	padding: 1em;
 	background-color: $color4;
 	border: 1px solid $color3;
-	@include box-shadow(0 0 5px $color3);
 	@include border-radius(5px);
 
 	#info{
