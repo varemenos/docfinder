@@ -94,7 +94,7 @@ $(function(){
 		$.ajax({
 			dataType: 'jsonp',
 			jsonp: 'callback',
-			url: 'http://searchco.de/api/jsonp_search_II/' + lang + ' ' + query + '/'+ ((current -1) * 10) + '/?callback=?',
+			url: 'http://searchco.de/api/jsonp_search_IV/?q=' + lang + ' ' + query + '&p='+ ((current -1) * 10) + '&callback=?',
 			success: function(data){
 				// show the requested url
 				// console.log('query = http://searchco.de/api/jsonp_search_II/' + lang + ' ' + query + '/'+ ((current -1) * 10) + '/?callback=?');
@@ -147,7 +147,7 @@ $(function(){
 
 				// add the attributed of "selected" to the currently selected option
 				$('#page option[name='+current+']').attr("selected", true);
-			},
+			}
 		});
 	}
 
