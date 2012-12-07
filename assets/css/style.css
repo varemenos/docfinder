@@ -355,11 +355,10 @@ form {
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 1%; }
+    padding: 1%;
+    -webkit-box-shadow: 0 0 0.25em #999999;
+    -moz-box-shadow: 0 0 0.25em #999999;
+    box-shadow: 0 0 0.25em #999999; }
     form fieldset input,
     form fieldset button,
     form fieldset select {
@@ -423,7 +422,10 @@ form {
   border: 1px solid #999999;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 0.25em #999999;
+  -moz-box-shadow: 0 0 0.25em #999999;
+  box-shadow: 0 0 0.25em #999999; }
   #results #info {
     z-index: 1;
     display: block;
