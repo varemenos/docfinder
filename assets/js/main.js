@@ -17,7 +17,6 @@ if (!(window.console && console.log)) {
 
 $(function () {
 	function getResults() {
-		console.log("getting results...");
 		// get the keyword
 		query = $('#query').val();
 		// get the selected language
@@ -54,7 +53,11 @@ $(function () {
 				$('#results').hide();
 
 				// print data returned {
-				$("#info h3").html('Found "' + data.total + '" results.');
+				if(data.total !== null){
+					$("#info h3").html('Found "' + data.total + '" results.');
+				}else{
+					$("#info h3").html('Please enter a keyword first');
+				}
 
 				// delete any already loaded results from previous queries
 				$('#results .result').remove();
