@@ -1,13 +1,14 @@
-#About
+#DocFinder
+
+##About
 An open source Documentation Searching webpage using searchco.de's API
-<br>Added Fancybox iframe integration
 
-#Search via url
+##Search via url
 
-##the "q" parameter
+###the "q" parameter
 setting the "q" url parameter to any string, will automatically insert that string in the keyword input and search for it once the page loads. For example: http://docfinder.aklp.gr/?q=explode
 
-##the "lang" parameter
+###the "lang" parameter
 setting the "lang" url parameter to a specific language name, will automatically pick that language from the dropdown menu when the page loads. For example: http://docfinder.aklp.gr/?lang=php
 
 valid options for the lang parameter are:
@@ -52,5 +53,12 @@ valid options for the lang parameter are:
 	<li>"windows_command" for Windows Command</li>
 </ul>
 
-##"q" and "lang" parameters (together)
+###"q" and "lang" parameters (together)
 You can use both of them at once for example: http://docfinder.aklp.gr/?lang=php&q=explode
+
+## License
+
+docFinder by [Adonis K.](http://varemenos.com) is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US).
+
+[![Creative Commons License](http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US)
+
