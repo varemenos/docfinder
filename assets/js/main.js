@@ -34,9 +34,6 @@ $(function () {
 			jsonp: 'callback',
 			url: 'http://searchco.de/api/jsonp_search_IV/?q=' + lang + ' ' + query + '&p=' + (params.page - 1) + '&callback=?',
 			success: function (data) {
-				// show the requested url
-				// console.log('query = http://searchco.de/api/jsonp_search_II/' + lang + ' ' + query + '/'+ ((params.page -1) * 10) + '/?callback=?');
-
 				// if the results are more than 10
 				if (data.total > 10) {
 					// then calculate pages
