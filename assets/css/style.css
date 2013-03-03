@@ -518,11 +518,7 @@ h1 a:hover {
   max-width: 1140px;
   width: 90%;
   margin: 2em auto 0 auto;
-  padding: 1em;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 1px solid #cccccc;
-  box-shadow: 1px 1px 1px #cccccc;
-  border-radius: 3px; }
+  padding: 1em; }
   #results #info {
     display: block;
     margin-bottom: 1em;
