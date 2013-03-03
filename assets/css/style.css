@@ -539,7 +539,8 @@ h1 a:hover {
     #results .result hr {
       margin: 0.25em; }
   #results h3 {
-    margin: 0; }
+    margin: 0;
+    line-height: 1em; }
     #results h3 span {
       position: relative;
       top: -2px;
