@@ -1,49 +1,30 @@
-<!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
-<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
-<head>
-	<meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
-			 More info: h5bp.com/i/378 -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Documentation Finder</title>
 
-	<title>Documentation Finder</title>
-	<meta name="description" content="">
-	<meta name="author" content="Varemenos">
+		<meta name="author" content="http://varemenos.com">
+		<meta name="description" content="A documentation searching service by AKLP.gr Projects and Adonis K.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Mobile viewport optimized: h5bp.com/viewport -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<!-- 1140px Grid styles for IE -->
-	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" /><![endif]-->
-
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
-	<link rel="stylesheet" href="assets/css/style.min.css">
-
-	<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
-</head>
-<body>
-	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
-			 chromium.org/developers/how-tos/chrome-frame-getting-started -->
-	<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.0/css/bootstrap.min.css?v=2.0">
+		<link rel="stylesheet" href="assets/css/style.css?v=2.0">
+	</head>
+	<body>
 
 	<div id="container">
-		<header class="row">
-				<h1>Documentation Search</h1>
-		</header>
-
-		<div id="main" role="main" class="row">
-			<article class="twelvecol last">
-				<form id="searchco" method="GET">
+		<div id="main" role="main">
+			<article>
+				<div class="page-header">
+					<h1><a href="./" title="Documentation Searching Service">Documentation Searching Service</a></h1>
+				</div>
+				<form class="form-horizontal">
 					<fieldset>
-						<input type="search" name="q" id="query" placeholder="Search">
-						<select name="lang" id="lang">
+						<input type="search" name="q" id="query" class="input-xlarge" placeholder="Search">
+						<select name="lang" id="lang" class="span3">
 							<option name="all">All</option>
 							<option name="apache">Apache 2 Directive</option>
 							<option name="brainfuck">BrainFuck</option>
@@ -83,51 +64,33 @@
 							<option name="win32_error">Win 32 Error</option>
 							<option name="windows_command">Windows Command</option>
 						</select>
-						<select name="page" id="page" disabled></select>
-						<button type="submit">Find</button>
-						<div class="clearfix"></div>
+						<select name="page" id="page" class="span1" disabled></select>
+						<button class="btn" type="submit"><i class="icon-search"></i></button>
 					</fieldset>
 				</form>
 				<div id="results">
 					<div id="info">
 						<h3></h3>
 					</div>
-				</div><!-- /results -->
+				</div>
 			</article>
 		</div>
 		<footer>
-			<p>
-				<a href="http://searchco.de/" target="_blank">Search[code] API Search</a> - <a href="https://github.com/varemenos/Doc-Finder" target="_blank">Public Github Repository</a> - <a href="https://github.com/varemenos/Doc-Finder/blob/master/README.md" target="_blank">Read Me</a>
-				<br>
-				Designed & Coded by <a href="http://varemenos.com/" target="_blank">Adonis K.</a> - 2012
-			</p>
+		 	<p><a href="http://searchco.de/" target="_blank">Search[code] API Search</a> - <a href="https://github.com/varemenos/Doc-Finder" target="_blank">Github Repository</a> - by <a href="http://varemenos.com/" target="_blank">Adonis K.</a></p>
 		</footer>
 	</div>
 
 
-	<!-- JavaScript at the bottom for fast page loading -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js?v=2.0"></script>
+		<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.8.0.min.js?v=2.0"><\/script>')</script>
+		<script src="assets/js/prefixfree.min.js?v=2.0"></script>
+		<script src="assets/js/main.js?v=2.0"></script>
 
-	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="assets/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
-
-	<!-- scripts concatenated and minified via build script -->
-	<script src="assets/js/plugins.js"></script>
-	<script src="assets/js/script.min.js"></script>
-	<!-- end scripts -->
-
-	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-			 mathiasbynens.be/notes/async-analytics-snippet -->
-	<script>
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-18251681-9']);
-		_gaq.push(['_trackPageview']);
-
-		(function(){
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
-</body>
+		<script>
+			var _gaq=[['_setAccount','UA-18251681-9'],['_trackPageview']];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)}(document,'script'));
+		</script>
+	</body>
 </html>
