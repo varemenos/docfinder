@@ -61,7 +61,7 @@ $(function () {
 
 				// create the result HTML
 				for (var i = 0; i < data.results.length; i++) {
-					$("#results").append('<div class="result"><h3><a class="resultLink" href="' + data.results[i].url + '">' + data.results[i].name + '</a><span class="label label-inverse">' + data.results[i].type + '</span></h3><hr><p class="description">' + data.results[i].description + '</p><p class="synopsis">' + data.results[i].synopsis + '</p><div class="namespace">' + data.results[i].namespace + '</div></div>');
+					$("#results").append('<div class="result"><h3><a class="resultLink" href="' + data.results[i].url + '" target="_blank">' + data.results[i].name + '</a><span class="label label-inverse">' + data.results[i].type + '</span></h3><hr><p class="description">' + data.results[i].description + '</p><p class="synopsis">' + data.results[i].synopsis + '</p><div class="namespace">' + data.results[i].namespace + '</div></div>');
 				}
 				// }
 
