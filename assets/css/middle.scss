@@ -1,0 +1,133 @@
+//  =====================
+//  = Author: Adonis K. =
+//  =====================
+
+// MIXINS GUIDE
+	// @include border-radius(5px),
+			//  border-radius(5px top, right)
+	// @include box-shadow($val1, [$val2, $val3, ... , $val6])
+	// @include transition($val)
+	// @include border-box
+	// @include hyphens
+	// @include gradient($color1, $color2, [$direction: {horizontal, vertical, radial}])
+	// @include font-face($family, $url)
+	// @include cssTriangle($size, $color, [$direction: {top, left, bottom, right}])
+
+// STYLES
+
+html{
+	height: 100%;
+	width: 100%;
+}
+
+body{
+	height: 100%;
+	width: 100%;
+	display: table;
+	background: radial-gradient(circle, #fff 0%, #ddd 100%) no-repeat top left fixed;
+}
+
+#container{
+	transition: 150ms ease;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 100%;
+}
+
+h1{
+	a,
+	a:visited{
+		color: #222;
+	}
+
+	a:hover{
+		color: #005580;
+	}
+}
+
+#results{
+	@include border-box;
+	display: none;
+	max-width: 1140px;
+	width: 90%;
+	margin: 2em auto 0 auto;
+	padding: 1em;
+
+	#info{
+		display: block;
+		margin-bottom: 1em;
+		padding: 0;
+		text-align: center;
+
+		h3{
+			font-size: 1em;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	.result{
+		text-align: left;
+		margin: 0.5em;
+		padding: 0.5em;
+		background-color: rgba(255, 255, 255, 0.2);
+		border: 1px solid #ccc;
+		box-shadow: 1px 1px 1px #ccc;
+		border-radius: 3px;
+
+		hr{
+			margin: 0.25em;
+		}
+	}
+
+	h3{
+		margin: 0;
+		line-height: 1em;
+
+		span{
+			position: relative;
+			top: -2px;
+			margin-left: 5px;
+		}
+	}
+
+	p{
+		font-size: 0.8em;
+		margin: 0;
+		padding: 0;
+		word-wrap: break-word;
+		@include hyphens(auto);
+	}
+
+	p.description{
+		font-weight: bold;
+	}
+}
+
+form{
+	display: inline-block;
+	padding: 1em;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	box-shadow: 1px 1px 1px #ccc;
+	border-radius: 3px;
+}
+
+footer{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	padding: 0.5em;
+	font-size: 0.85em;
+	text-align: center;
+	color: #222;
+	border: 1px solid rgba(255, 255, 255, 0.9);
+	background-color: rgba(255, 255, 255, 0.7);
+
+	p{
+		margin: 0;
+		padding: 0;
+	}
+}
