@@ -493,7 +493,7 @@ body {
   height: 100%;
   width: 100%;
   display: table;
-  background: radial-gradient(circle, white 0%, #dddddd 100%); }
+  background: radial-gradient(circle, white 0%, #dddddd 100%) no-repeat top left fixed; }
 
 #container {
   transition: 150ms ease;
