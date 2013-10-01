@@ -21,13 +21,18 @@ html{
 }
 
 body{
+	@include border-box;
 	height: 100%;
 	width: 100%;
 	display: table;
+	word-break: break-all;
+	word-wrap: break-word;
+	background-color: #fff;
 	background: radial-gradient(circle, #fff 0%, #ddd 100%) no-repeat top left fixed;
 }
 
 #container{
+	@include border-box;
 	transition: 150ms ease;
 	display: table-cell;
 	vertical-align: middle;
@@ -36,6 +41,11 @@ body{
 }
 
 h1{
+	@media only screen and (max-width: 1139px){
+		word-break: initial;
+		word-wrap: initial;
+	}
+
 	a,
 	a:visited{
 		color: #222;
@@ -53,6 +63,10 @@ h1{
 	width: 90%;
 	margin: 2em auto 0 auto;
 	padding: 1em;
+
+	@media only screen and (max-width: 1139px){
+		max-width: none;
+	}
 
 	#info{
 		display: block;
@@ -112,6 +126,26 @@ form{
 	border: 1px solid #ccc;
 	box-shadow: 1px 1px 1px #ccc;
 	border-radius: 3px;
+
+
+	@media only screen and (max-width: 1139px){
+		display: block;
+
+		fieldset > *{
+			-webkit-box-sizing: border-box !important;
+			-moz-box-sizing: border-box !important;
+			-ms-box-sizing: border-box !important;
+			box-sizing: border-box !important;
+			*behavior: url(assets/js/boxsizing.htc);
+			width: 100% !important;
+			display: block !important;
+			margin-bottom: 1em !important;
+		}
+
+		fieldset > input{
+			padding: 1em !important;
+		}
+	}
 }
 
 footer{
