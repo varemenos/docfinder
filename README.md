@@ -56,6 +56,10 @@ valid options for the lang parameter are:
 ###"q" and "lang" parameters (together)
 You can use both of them at once for example: `?lang=php&q=explode`
 
+## Android App
+
+get it from [here](https://play.google.com/store/apps/details?id=com.varemenos.docfinder)
+
 ## License
 
 docFinder by [Adonis K.](http://adonisk.com) is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US).
